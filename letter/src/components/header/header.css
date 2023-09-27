@@ -1,0 +1,39 @@
+.header {
+    background-color: #f1eae7;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.header__list {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header__list-item {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 2.3rem;
+    color:#ad4f3d;
+    padding: 0.5rem 1rem;
+}
+
+.user__log-in {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    background-color: #58b78c;
+    color:#fff;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
+.user__sign-up {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    background-color: #e0b62a;
+    color:#fff;
+    font-size: 1.3rem;
+}

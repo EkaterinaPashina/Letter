@@ -1,0 +1,12 @@
+.logo__container {
+    max-width: 15vw;
+}
+
+.logo__img {
+    /* max-width: 40%; */
+}
+
+.logo__image {
+    width:100%;
+    max-width: 100%;
+}

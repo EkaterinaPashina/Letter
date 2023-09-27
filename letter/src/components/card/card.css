@@ -1,0 +1,63 @@
+.card__container {
+    background-color: #ad4f3d;
+    min-height: 80vh;
+    padding: 1rem;
+}
+
+.card__cover {
+    max-width: 30vw;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    
+    background-color: #f1eae7;
+    color: #42210b;
+    font-size: 2.5rem;
+    text-align: center;
+
+    font-family: 'Raleway', sans-serif;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    margin-top: 1.5rem;
+}
+
+.card__topic {
+    border-top: 2px solid #42210b;
+}
+.card__topic > p{
+    padding-top: 1rem;
+    margin: 0;
+}
+
+.card__buttons {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 30vw;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+}
+
+.card__to-learn, .card__know {
+    font-family: 'Raleway', sans-serif;
+    padding: 1.5rem 3.5rem;
+    border-radius: 15px;
+    font-size: 1.2rem;
+}
+
+.card__img {
+    max-width: 70%;
+    margin:auto;
+}
+
+.card__image {
+    max-width: 100%;
+}
+
+.card__english > p{
+    margin-top: 0;
+}
