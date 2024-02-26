@@ -1,13 +1,21 @@
 .header {
-    background-color: #f1eae7;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    background-color: #fff;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
+    border: 1px solid #ccd0cc;
 }
 
 .header__list {
     display: flex;
+    padding-left: 5rem;
+}
+
+ul {
+    margin: 0;
 }
 
 li {
@@ -15,25 +23,24 @@ li {
 }
 
 .header__list-item {
-    font-family: 'Pattaya', sans-serif;
-    font-size: 2.3rem;
-    color:#ad4f3d;
+    font-size: 1.2rem;
+    color:#69756a;
     padding: 0.5rem 1rem;
 }
 
 .user__log-in {
     padding: 0.5rem 1rem;
     border-radius: 15px;
-    background-color: #58b78c;
-    color:#fff;
+    background-color: #69756a;
+    color: #fff;
     margin-right: 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .user__sign-up {
     padding: 0.5rem 1rem;
     border-radius: 15px;
-    background-color: #e0b62a;
+    background-color: #69756a;
     color:#fff;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }

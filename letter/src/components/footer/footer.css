@@ -1,6 +1,14 @@
 .footer__container {
-    background-color: #482712;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    background-color: #3e453e;
     padding: 1rem;
     text-align: center;
     color: #fff;
+
+    /* position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0; */
+    margin-top: 0.5rem;
 }
