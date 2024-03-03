@@ -1,10 +1,14 @@
 .card__container {
+    max-width: 1200px;
     display: flex;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card__cover {
     display: flex;
-    justify-content:space-around;
+    flex-direction: column;
     align-items: center;
     width: 70vw;
 
@@ -13,29 +17,13 @@
     
     background-color: #fff;
     color: #3e453e;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
 
     font-family: "Manrope", sans-serif;
     font-style: normal;
 
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 1.5rem;
-}
-
-.card__topic > p{
-    margin: 0;
-}
-
-.card__buttons {
-    display: flex;
-    justify-content: space-between;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5rem;
-    gap: 1rem;
 }
 
 .card__to-learn, .card__know {

@@ -1,0 +1,30 @@
+.addLine {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.addLine__input {
+    border: 1px solid rgb(86, 80, 80);
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 5px;
+}
+
+.addLine__button {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    background-color: rgb(243, 231, 255);
+    padding: 5px 15px;
+    margin-left: 2rem;
+    border: 1px solid rgb(86, 80, 80);
+    border-radius: 5px;
+}
+
+.addLine__title {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+}
