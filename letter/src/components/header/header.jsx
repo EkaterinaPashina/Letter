@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../logo/logo';
 import './header.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 export default class Header extends React.Component {
     render() {
@@ -9,16 +10,11 @@ export default class Header extends React.Component {
                 <Logo />
                 <nav>
                     <ul className="header__list">
-                        <li><a className="header__list-item">Словарь</a></li>
-                        <li><a className="header__list-item">Карточки</a></li>
-                        <li><a className="header__list-item">Игра</a></li>
+                        <li><Link to="/" className="header__list-item">Главная</Link></li>
+                        <li><Link to="/cards" className="header__list-item">Карточки</Link></li>
+                        <li><Link to="/game" className="header__list-item">Игра</Link></li>
                     </ul>
                 </nav>
-                {/* 
-                <div className="user">
-                    <a className="user__log-in">Вход</a>
-                    <a className="user__sign-up">Регистрация</a>
-                </div> */}
             </header>
         )
     }

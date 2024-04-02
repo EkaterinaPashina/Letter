@@ -1,5 +1,6 @@
 .addLine {
-    margin: 1rem auto;
+    margin: auto;
+    margin-top: 6rem;
     display: flex;
     justify-content: space-around;
     max-width: 1000px;

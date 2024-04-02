@@ -1,10 +1,12 @@
 import React from 'react';
 import './table.css';
 import dictionary from '../words/words';
+import AddLine from '../addLine/addLine';
 
 function Table() {
     return (
         <>
+            <AddLine />
             <table className="table" border="1" border-collapse="collapse" align="center" cellSpacing="0">
                 <tbody>
                     <tr>
