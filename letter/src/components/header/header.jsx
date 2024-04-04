@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../logo/logo';
 import './header.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class Header extends React.Component {
     render() {

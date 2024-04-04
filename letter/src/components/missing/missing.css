@@ -1,5 +1,15 @@
 .lostPage {
-    padding-top: 12rem;
+    padding-top: 10rem;
     text-align: center;
     color:black;
+}
+
+.lostPage__return {
+    text-align: center;
+    color:black;
+}
+
+.lostPage__img {
+    margin: auto;
+    width: 250px;
 }
