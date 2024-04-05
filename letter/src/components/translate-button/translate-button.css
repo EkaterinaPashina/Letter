@@ -1,0 +1,14 @@
+.translate-button {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 1.2rem;
+
+    background-color: #3e453eaa;
+    color:#defae2;
+
+    margin-top: 1.4rem;
+    margin-bottom: 1.45rem;
+    padding: 0 10px;
+    border-radius: 10px;
+    border-color:transparent;
+}
