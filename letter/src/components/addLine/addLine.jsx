@@ -1,7 +1,7 @@
 import React from 'react';
 import "./addLine.css";
 
-function AddLine() {
+export default function AddLine() {
     return (
         <div className="addLine">
             <legend className="addLine__title">Английский</legend>
@@ -14,5 +14,3 @@ function AddLine() {
         </div>
     )
 }
-
-export default AddLine;

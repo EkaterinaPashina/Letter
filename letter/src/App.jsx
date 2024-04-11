@@ -10,23 +10,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Table />} />
-            <Route path='/cards' element={<Card />} />
-            <Route path='/game' element={<Game />} />
-            <Route path="*" element={<Missing />} />
-          </Routes>
-          <Footer />
-        </>
-      </Router>
-    );
-  }
+export default function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path='/' element={<Table />} />
+          <Route path='/cards' element={<Card />} />
+          <Route path='/game' element={<Game />} />
+          <Route path="*" element={<Missing />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router >
+  );
 };
-
-export default App;

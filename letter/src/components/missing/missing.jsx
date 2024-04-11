@@ -2,7 +2,7 @@ import React from 'react';
 import './missing.css';
 import { Link } from 'react-router-dom';
 
-function Missing() {
+export default function Missing() {
     return (
         <>
             <h1 className="lostPage">Упс! Кажется, такой страницы не существует!</h1>
@@ -13,5 +13,3 @@ function Missing() {
         </>
     )
 }
-
-export default Missing;

@@ -1,7 +1,7 @@
 .header {
     font-family: "Manrope", sans-serif;
     font-style: normal;
-    background-color: #fff;
+    background-color: #b7c3c1;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +32,7 @@ li {
     padding: 0.5rem 1rem;
 }
 
-.user__log-in {
+/* .user__log-in {
     padding: 0.5rem 1rem;
     border-radius: 15px;
     background-color: #69756a;
@@ -47,4 +47,4 @@ li {
     background-color: #69756a;
     color:#fff;
     font-size: 1rem;
-}
+} */

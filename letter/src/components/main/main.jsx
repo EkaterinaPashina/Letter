@@ -6,18 +6,16 @@ import dictionary from '../words/words';
 import Table from '../table/table';
 
 
-export default class Main extends React.Component {
-    render() {
-        return (
-            // <div className="main">
-            //     <Titles />
-            //     {dictionary.map((word) =>
-            //         <Card english={word.english}
-            //             russian={word.russian}
-            //             transcription={word.transcription}
-            //             topic={word.topic} />)}
-            // </div>
-            <Table />
-        )
-    }
+export default function Main() {
+    return (
+        // <div className="main">
+        //     <Titles />
+        //     {dictionary.map((word) =>
+        //         <Card english={word.english}
+        //             russian={word.russian}
+        //             transcription={word.transcription}
+        //             topic={word.topic} />)}
+        // </div>
+        <Table />
+    )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import './game.css';
-import dictionary from '../words/words';
+import dictionary from '../data/words';
 import Translatebutton from '../translate-button/translate-button';
 
 export default function Game() {

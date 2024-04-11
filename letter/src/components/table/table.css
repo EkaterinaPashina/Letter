@@ -2,6 +2,8 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 80%;
+    background-color: rgba(240, 248, 255, 0.544);
+    border: 1px solid #69756a;
 }
 
 .table__title {
@@ -40,3 +42,6 @@
     background-color: rgba(106, 255, 114, 0.19);
 }
 
+.table__title-edit {
+    width: 300px;
+}
