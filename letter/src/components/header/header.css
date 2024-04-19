@@ -30,21 +30,16 @@ li {
     font-size: 1.2rem;
     color:#69756a;
     padding: 0.5rem 1rem;
+
+    background-image: linear-gradient(#818589 50%, #dedfda 50%);
+    background-size: 100% 200%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 550ms ease-in-out;
 }
 
-/* .user__log-in {
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    background-color: #69756a;
-    color: #fff;
-    margin-right: 1rem;
-    font-size: 1rem;
+.header__list-item:hover {
+    background-position: 0% 100%;
+    font-size: 1.4rem;
 }
-
-.user__sign-up {
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    background-color: #69756a;
-    color:#fff;
-    font-size: 1rem;
-} */
