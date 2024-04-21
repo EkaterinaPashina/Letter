@@ -1,0 +1,9 @@
+.cards__container {
+    margin: 6rem auto 5rem auto;
+    
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}

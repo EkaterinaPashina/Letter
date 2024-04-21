@@ -1,7 +1,7 @@
 import React from 'react';
-import './table.css';
-import dictionary from '../data/words';
-import AddLine from '../addLine/addLine';
+import './Main.css';
+import dictionary from "../../components/data/words";
+import AddLine from "../../components/addLine/addLine";
 
 export default function Table() {
     return (

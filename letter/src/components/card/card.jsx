@@ -1,23 +1,18 @@
 import React from 'react';
 import './card.css';
-import dictionary from '../data/words';
 
-export default function Card() {
+export default function Card({ id, english, transcription, russian }) {
     return (
-        <div className="card__container">
-            {dictionary.map((word) =>
-                <div className="card__cover" key={word.id}>
-                    <div className="card__english">
-                        <p>{word.english}</p>
-                    </div>
-                    <div className="card__transcription">
-                        <p>{word.transcription}</p>
-                    </div>
-                    <div className="card__russian">
-                        <p>{word.russian}</p>
-                    </div>
-                </div>
-            )}
+        <div className="card__cover" key={id}>
+            <div className="card__english">
+                <p>{english}</p>
+            </div>
+            <div className="card__transcription">
+                <p>{transcription}</p>
+            </div>
+            <div className="card__russian">
+                <p>{russian}</p>
+            </div>
         </div>
     )
 }

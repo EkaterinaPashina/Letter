@@ -41,6 +41,41 @@ const dictionary = [
         "transcription": "ˈlemən",
         "topic": "fruits",
     },
+    {
+        "id": "7",
+        "english": "cranberry",
+        "russian": "клюква",
+        "transcription": "ˈkrænbərɪ",
+        "topic": "fruits",
+    },
+    {
+        "id": "8",
+        "english": "cucumber",
+        "russian": "огурец",
+        "transcription": "ˈkjuːkʌmbər",
+        "topic": "vegetable",
+    },
+    {
+        "id": "9",
+        "english": "eggplant",
+        "russian": "баклажан",
+        "transcription": "ˈeɡplɑːnt",
+        "topic": "vegetable",
+    },
+    {
+        "id": "10",
+        "english": "peach",
+        "russian": "персик",
+        "transcription": "piːtʃ",
+        "topic": "vegetable",
+    },
+    {
+        "id": "11",
+        "english": "pomegranate",
+        "russian": "гранат",
+        "transcription": "ˈpɒm.ɪˌɡræn.ɪt",
+        "topic": "vegetable",
+    },
 ]
 
 export default dictionary;

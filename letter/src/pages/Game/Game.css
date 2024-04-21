@@ -1,11 +1,10 @@
 .game__container {
-    margin-top: 3rem;
+    margin: 3rem auto 6rem auto;
     max-width: 400px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .game__learnt {
@@ -45,8 +44,6 @@
     margin-bottom: 2rem;
 }
 
-
-
 .game__to-learn, .game__know {
     font-family: "Manrope", sans-serif;
     font-style: normal;
@@ -59,9 +56,14 @@
 }
 
 .game__leftButton, .game__rightButton {
-    width: 250px;
+    width: 75px;
 }
 
 .game__leftButton .game__Button-img, .game__rightButton .game__Button-img  {
+    width: 90%;
+}
+
+.game__leftButton .game__Button-img:hover, 
+.game__rightButton .game__Button-img:hover {
     width: 100%;
 }
