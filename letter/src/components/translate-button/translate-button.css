@@ -9,4 +9,9 @@
     padding: 0 10px;
     border-radius: 10px;
     border-color:transparent;
+
+}
+
+.translate-button:hover {
+    background-color: #3e453e;
 }

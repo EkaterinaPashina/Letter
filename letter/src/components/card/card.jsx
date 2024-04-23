@@ -11,7 +11,7 @@ export default function Card({ id, english, transcription, russian }) {
                 <p>{transcription}</p>
             </div>
             <div className="card__russian">
-                <p>{russian}</p>
+                {russian}
             </div>
         </div>
     )
