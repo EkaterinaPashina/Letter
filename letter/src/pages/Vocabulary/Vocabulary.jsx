@@ -1,10 +1,10 @@
 import React from 'react';
-import './Vocabulary.css';
+import vocabulary from './Vocabulary.module.css';
 
 export default function Vocabulary() {
     return (
         <>
-            <h3 className="vocabulary__header">Здесь будет словарь изученных слов</h3>
+            <h3 className={vocabulary.header}>Здесь будет словарь изученных слов</h3>
         </>
     )
 }

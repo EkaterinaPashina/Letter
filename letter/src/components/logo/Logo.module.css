@@ -1,13 +1,13 @@
-.logo__container {
+.container {
     max-width: 5vw;
     padding-left: 40px;
 }
 
-.logo__img {
+.img {
     /* max-width: 40%; */
 }
 
-.logo__image {
+.image {
     width:100%;
     max-width: 100%;
 }

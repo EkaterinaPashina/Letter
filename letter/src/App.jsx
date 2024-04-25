@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Main from './pages/Main/Main';
 import Cards from './pages/Cards/Cards';
-import Missing from './components/missing/missing';
+import Missing from './components/Missing/Missing';
 import Game from './pages/Game/Game';
 import Vocabulary from './pages/Vocabulary/Vocabulary';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

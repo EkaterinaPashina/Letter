@@ -1,4 +1,4 @@
-.card__cover {
+.cover {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@
     margin-top: 1.5rem;
 }
 
-.card__to-learn, .card__know {
+.to__learn, .card__know {
     font-family: "Manrope", sans-serif;
     font-style: normal;
     color: #2f342f;
@@ -29,7 +29,7 @@
     font-size: 1.2rem;
 }
 
-.card__russian {
+.russian {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     padding: 0;

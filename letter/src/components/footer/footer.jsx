@@ -1,8 +1,8 @@
 import React from 'react';
-import './footer.css';
+import footer from './Footer.module.css';
 
 export default function Footer() {
     return (
-        <div className="footer__container">Изучай английский с нами!</div>
+        <div className={footer.container}>Изучай английский с нами!</div>
     )
 }

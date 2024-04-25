@@ -7,15 +7,16 @@
     align-items: center;
 }
 
-.addLine__input {
+.input {
     border: 1px solid rgb(86, 80, 80);
     border-radius: 5px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     padding: 5px;
+    width: 100px;
 }
 
-.addLine__button {
+.button {
     font-family: "Manrope", sans-serif;
     font-style: normal;
     background-color: rgb(243, 231, 255);
@@ -25,7 +26,7 @@
     border-radius: 5px;
 }
 
-.addLine__title {
+.title {
     font-family: "Manrope", sans-serif;
     font-style: normal;
 }

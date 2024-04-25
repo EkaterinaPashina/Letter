@@ -1,16 +1,19 @@
 import React from 'react';
-import "./addLine.css";
+import addLine from "./AddLine.module.css";
 
-export default function AddLine() {
+export default function AddLine({ textEnglish, setTextEnglish, textTranscription, setTextTranscription, textTopic, setTextTopic, textRussian, setTextRussian, handleSubmit }) {
+
     return (
-        <div className="addLine">
-            <legend className="addLine__title">Английский</legend>
-            <input type="text" className="addLine__input" />
-            <legend className="addLine__title">Транскрипция</legend>
-            <input type="text" className="addLine__input" />
-            <legend className="addLine__title">Русский</legend>
-            <input type="text" className="addLine__input" />
-            <button className="addLine__button">Добавить</button>
-        </div>
+        <form className={addLine.addLine} onSubmit={handleSubmit}>
+            <legend className={addLine.title}>Английский</legend>
+            <input type="text" className={addLine.input} onChange={(e) => setTextEnglish(e.target.value)} value={textEnglish} />
+            <legend className={addLine.title}>Транскрипция</legend>
+            <input type="text" className={addLine.input} onChange={(e) => setTextTranscription(e.target.value)} value={textTranscription} />
+            <legend className={addLine.title}>Русский</legend>
+            <input type="text" className={addLine.input} onChange={(e) => setTextTopic(e.target.value)} value={textTopic} />
+            <legend className={addLine.title}>Тема</legend>
+            <input type="text" className={addLine.input} onChange={(e) => setTextRussian(e.target.value)} value={textRussian} />
+            <input className={addLine.button} type='submit' value='Добавить' />
+        </form>
     )
 }

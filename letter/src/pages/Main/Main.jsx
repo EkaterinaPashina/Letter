@@ -1,24 +1,29 @@
 import React from 'react';
-import './Main.css';
-import dictionary from "../../components/data/words";
-import AddLine from "../../components/addLine/addLine";
+import main from './Main.module.css';
+import dictionary from "../../data/Words";
+import AddLine from "../../components/AddLine/AddLine";
+import Table from '../../components/Table/Table';
+import { useState } from 'react';
 
-export default function Table() {
+export default function Main() {
+    const [defaultData, setDefaultData] = useState(dictionary);
+
+    const [textEnglish, setTextEnglish] = useState("");
+    const [textTranscription, setTextTranscription] = useState("");
+    const [textRussian, setTextRussian] = useState("");
+    const [textTopic, setTextTopic] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setDefaultData(defaultData.push({ "id": `${defaultData.length + 1}`, "english": `${textEnglish}`, "russian": `${textRussian}`, "transcription": `${textTranscription}`, "topic": `${textTopic}` }));
+        console.log(defaultData);
+    };
+
     return (
         <>
-            <AddLine />
-            <table className="table" border="1" border-collapse="collapse" align="center" cellSpacing="0">
-                <tbody>
-                    <tr>
-                        <th className="table__title">Английский</th>
-                        <th className="table__title">Транскрипция</th>
-                        <th className="table__title">Русский</th>
-                        <th className="table__title table__title-edit">Редактировать/Удалить</th>
-                    </tr>
-                    {dictionary.map((word) =>
-                        <tr key={word.id}><td className="table__eng">{word.english}</td><td className="table__tr">{word.transcription}</td><td className="table__rus">{word.russian}</td><td className="table__button-line"><button className="table__edit">Редактировать</button><button className="table__delete">Удалить</button></td></tr>)}
-                </tbody>
-            </table>
+            <AddLine textEnglish={textEnglish} setTextEnglish={setTextEnglish} textTranscription={textTranscription} setTextTranscription={setTextTranscription} textRussian={textRussian} setTextRussian={setTextRussian} textTopic={textTopic} setTextTopic={setTextTopic} handleSubmit={handleSubmit} />
+            <p>{textEnglish} {textTranscription} {textRussian} {textTopic}</p>
+            <Table defaultData={defaultData} />
         </>
     )
 }

@@ -1,4 +1,4 @@
-.translate-button {
+.translate_button {
     font-family: "Manrope", sans-serif;
     font-style: normal;
     font-size: 1.2rem;
@@ -12,6 +12,6 @@
 
 }
 
-.translate-button:hover {
+.translate_button:hover {
     background-color: #3e453e;
 }
