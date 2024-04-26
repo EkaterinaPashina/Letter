@@ -81,7 +81,7 @@ const WordListItem = ({ english, transcription, russian, topic }) => {
                 {
                     isEdited
                         ?
-                        ((value.valueRussian !== "" && value.Transcription !== "" && value.valueEnglish) ? (<button className={tableList.save}>Сохранить</button>) : (<button className={tableList.save} disabled >Сохранить</button>))
+                        ((value.valueRussian !== "" && value.valueTranscription !== "" && value.valueEnglish) ? (<button className={tableList.save}>Сохранить</button>) : (<button className={tableList.save} disabled >Сохранить</button>))
                         :
                         (<button className={tableList.edit}>Редактировать</button>)
                 }
