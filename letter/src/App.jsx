@@ -17,7 +17,7 @@ export default function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/Letter' element={<Main />} />
           <Route path='/cards' element={<Cards />} />
           <Route path='/game' element={<Game />} />
           <Route path='/vocabulary' element={<Vocabulary />} />

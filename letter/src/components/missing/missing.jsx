@@ -9,7 +9,7 @@ export default function Missing() {
             <div className={lostPage.img}>
                 <img src="https://media.tenor.com/PGnGqfkIuLYAAAAM/cat-head.gif" alt="Грустный кот" />
             </div>
-            <p className={lostPage.return}>Попробуйте вернуться на {<Link to="/">Главную страницу</Link>}</p>
+            <p className={lostPage.return}>Попробуйте вернуться на {<Link to="/Letter">Главную страницу</Link>}</p>
         </>
     )
 }

@@ -9,7 +9,7 @@ export default function Header() {
             <Logo />
             <nav>
                 <ul className={header.list}>
-                    <li><Link to="/" className={header.list_item}>Главная</Link></li>
+                    <li><Link to="/Letter" className={header.list_item}>Главная</Link></li>
                     <li><Link to="/cards" className={header.list_item}>Карточки</Link></li>
                     <li><Link to="/game" className={header.list_item}>Игра</Link></li>
                     <li><Link to="/vocabulary" className={header.list_item}>Словарь</Link></li>
