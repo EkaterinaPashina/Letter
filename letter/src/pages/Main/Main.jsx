@@ -8,28 +8,37 @@ import { useState } from 'react';
 export default function Main() {
     const [defaultData, setDefaultData] = useState(dictionary);
 
-    const [textEnglish, setTextEnglish] = useState("");
-    const [textTranscription, setTextTranscription] = useState("");
-    const [textRussian, setTextRussian] = useState("");
-    const [textTopic, setTextTopic] = useState("");
+    const initialFormData = {
+        english: "",
+        transcription: "",
+        russian: "",
+        topic: ""
+    };
+
+    const [formData, setFormData] = useState(initialFormData);
 
     const [textEmpty, setTextEmpty] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (textEnglish !== "" && textRussian !== "" && textTranscription !== "" && textTopic !== "") {
-            setDefaultData([...defaultData, { id: `${defaultData.length + 1}`, english: `${textEnglish}`, russian: `${textRussian}`, transcription: `${textTranscription}`, topic: `${textTopic}` },]);
+        if (formData.english !== "" && formData.russian !== "" && formData.transcription !== "" && formData.topic !== "") {
+            setDefaultData([...defaultData, { id: `${defaultData.length + 1}`, ...formData }]);
+            setFormData(initialFormData); // Очистка полей после добавления
             setTextEmpty("");
         } else {
             setTextEmpty("Заполните все поля перед добавлением слова");
         }
     };
 
+    const handleDelete = (id) => {
+        setDefaultData(defaultData.filter(word => word.id !== id));
+    };
+
     return (
         <>
-            <AddLine textEnglish={textEnglish} setTextEnglish={setTextEnglish} textTranscription={textTranscription} setTextTranscription={setTextTranscription} textRussian={textRussian} setTextRussian={setTextRussian} textTopic={textTopic} setTextTopic={setTextTopic} handleSubmit={handleSubmit} />
+            <AddLine formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} />
             <p className={main.empty}>{textEmpty}</p>
-            <Table defaultData={defaultData} />
+            <Table defaultData={defaultData} onDelete={handleDelete} />
         </>
     )
 }

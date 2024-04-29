@@ -41,3 +41,10 @@
 .title_edit {
     width: 300px;
 }
+
+.input {
+    border-radius: 5px;
+    padding: 2px 5px;
+    width: 120px;
+    border: 1px solid black;
+}

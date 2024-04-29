@@ -2,7 +2,7 @@ import React from 'react';
 import table from './Table.module.css';
 import TableList from "../TableList/TableList";
 
-export default function Table({ defaultData }) {
+export default function Table({ defaultData, onDelete }) {
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function Table({ defaultData }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {defaultData.map((word) => (<TableList key={word.id} english={word.english} transcription={word.transcription} russian={word.russian} topic={word.topic} />))}
+                    {defaultData.map((word) => (<TableList id={word.id} key={word.id} english={word.english} transcription={word.transcription} russian={word.russian} topic={word.topic} onDelete={onDelete} />))}
                 </tbody>
             </table>
         </>

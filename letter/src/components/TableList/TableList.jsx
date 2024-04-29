@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import tableList from './TableList.module.css';
 
-const WordListItem = ({ english, transcription, russian, topic }) => {
+const WordListItem = ({ id, english, transcription, russian, topic, onDelete }) => {
 
     const [isEdited, setIsEdited] = useState(false);
 
@@ -25,7 +25,7 @@ const WordListItem = ({ english, transcription, russian, topic }) => {
                     valueRussian: russian,
                 }), setIsEdited(false)];
             case 'Удалить':
-                console.log("В процессе разработки");
+                console.log("Удаление");
                 break;
             default: console.log('Иное действие');
         }
@@ -90,7 +90,7 @@ const WordListItem = ({ english, transcription, russian, topic }) => {
                     isEdited ? (
                         <button className={tableList.exit}>Отменить</button>
                     ) : (
-                        <button className={tableList.delete}>Удалить</button>
+                        <button className={tableList.delete} onClick={() => onDelete(id)}>Удалить</button>
                     )
                 }
             </td>
