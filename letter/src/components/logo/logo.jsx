@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Logo() {
     return (
-        <Link to="/">
+        <Link to="/Letter">
             <div className={logo.container}>
                 <div className={logo.img}>
                     <img className={logo.image} src={logoImage} alt="Logo" />
