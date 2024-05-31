@@ -1,18 +1,21 @@
 import React from 'react';
 import main from './Main.module.css';
-import dictionary from "../../data/Words";
+// import dictionary from "../../data/Words";
 import AddLine from "../../components/AddLine/AddLine";
 import Table from '../../components/Table/Table';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { DataContext } from '../../context/DataContext';
 
 export default function Main() {
-    const [defaultData, setDefaultData] = useState(dictionary);
+    const { words } = useContext(DataContext);
+    const [defaultData, setDefaultData] = useState(words);
 
     const initialFormData = {
         english: "",
         transcription: "",
         russian: "",
-        topic: ""
+        tags: "",
     };
 
     const [formData, setFormData] = useState(initialFormData);

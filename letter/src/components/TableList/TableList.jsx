@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { DataContext } from "../../context/DataContext";
 
 import tableList from './TableList.module.css';
 
-const WordListItem = ({ id, english, transcription, russian, topic, onDelete }) => {
+const WordListItem = ({ id, english, transcription, russian, tags, onDelete }) => {
 
     const [isEdited, setIsEdited] = useState(false);
+    const { handleSave } = useContext(DataContext);
 
     const [value, setValue] = useState({
-        valueEnglish: english,
-        valueTranscription: transcription,
-        valueRussian: russian,
+        english: english,
+        transcription: transcription,
+        russian: russian,
     });
 
     const handleEdit = (e) => {
@@ -17,12 +19,14 @@ const WordListItem = ({ id, english, transcription, russian, topic, onDelete }) 
             case 'Редактировать':
                 return setIsEdited(true);
             case 'Сохранить':
+                handleSave(value, value.id);
                 return setIsEdited(false);
             case 'Отменить':
                 return [setValue({
-                    valueEnglish: english,
-                    valueTranscription: transcription,
-                    valueRussian: russian,
+                    id: id,
+                    english: english,
+                    transcription: transcription,
+                    russian: russian,
                 }), setIsEdited(false)];
             case 'Удалить':
                 console.log("Удаление");
@@ -33,47 +37,47 @@ const WordListItem = ({ id, english, transcription, russian, topic, onDelete }) 
 
     function getValueEnglish(e) {
         setValue({
-            ...value, valueEnglish: e.target.value
+            ...value, english: e.target.value
         });
     }
 
     function getValueTranscription(e) {
         setValue({
-            ...value, valueTranscription: e.target.value
+            ...value, transcription: e.target.value
         });
     }
 
     function getValueRussian(e) {
         setValue({
-            ...value, valueRussian: e.target.value
+            ...value, russian: e.target.value
         });
     }
 
     return (
         <tr onClick={handleEdit}>
-            <td className={tableList.topic}>{topic}</td>
+            <td className={tableList.topic}>{tags}</td>
             {isEdited ? (
                 <td className={tableList.topic}>
-                    <input type="text" className={tableList.input} onChange={getValueEnglish} value={value.valueEnglish} />
+                    <input type="text" className={tableList.input} onChange={getValueEnglish} value={value.english} />
                 </td>
             ) : (
-                <td className={tableList.eng}>{value.valueEnglish}</td>
+                <td className={tableList.eng}>{value.english}</td>
             )}
 
             {isEdited ? (
                 <td className={tableList.trans}>
-                    <input type="text" className={tableList.input} onChange={getValueTranscription} value={value.valueTranscription} />
+                    <input type="text" className={tableList.input} onChange={getValueTranscription} value={value.transcription} />
                 </td>
             ) : (
-                <td className={tableList.trans}>{value.valueTranscription}</td>
+                <td className={tableList.trans}>{value.transcription}</td>
             )}
 
             {isEdited ? (
                 <td className={tableList.rus}>
-                    <input type="text" className={tableList.input} onChange={getValueRussian} value={value.valueRussian} />
+                    <input type="text" className={tableList.input} onChange={getValueRussian} value={value.russian} />
                 </td>
             ) : (
-                <td className={tableList.rus}>{value.valueRussian}</td>
+                <td className={tableList.rus}>{value.russian}</td>
             )
             }
 
@@ -81,7 +85,7 @@ const WordListItem = ({ id, english, transcription, russian, topic, onDelete }) 
                 {
                     isEdited
                         ?
-                        ((value.valueRussian !== "" && value.valueTranscription !== "" && value.valueEnglish) ? (<button className={tableList.save}>Сохранить</button>) : (<button className={tableList.save} disabled >Сохранить</button>))
+                        ((value.russian !== "" && value.transcription !== "" && value.english) ? (<button className={tableList.save}>Сохранить</button>) : (<button className={tableList.save} disabled >Сохранить</button>))
                         :
                         (<button className={tableList.edit}>Редактировать</button>)
                 }

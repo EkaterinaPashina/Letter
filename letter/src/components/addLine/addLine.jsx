@@ -14,7 +14,7 @@ export default function AddLine({ formData, setFormData, handleSubmit }) {
     return (
         <form className={addLine.addLine} onSubmit={handleSubmit}>
             <legend className={addLine.title}>Тема</legend>
-            <input name="topic" type="text" className={addLine.input} onChange={handleChange} value={formData.topic} />
+            <input name="tags" type="text" className={addLine.input} onChange={handleChange} value={formData.tags} />
             <legend className={addLine.title}>Английский</legend>
             <input name="english" type="text" className={addLine.input} onChange={handleChange} value={formData.english} />
             <legend className={addLine.title}>Транскрипция</legend>

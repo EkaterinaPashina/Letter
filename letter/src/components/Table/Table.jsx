@@ -17,7 +17,7 @@ export default function Table({ defaultData, onDelete }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {defaultData.map((word) => (<TableList id={word.id} key={word.id} english={word.english} transcription={word.transcription} russian={word.russian} topic={word.topic} onDelete={onDelete} />))}
+                    {defaultData.map((word) => (<TableList id={word.id} key={word.id} english={word.english} transcription={word.transcription} russian={word.russian} tags={word.tags} onDelete={onDelete} />))}
                 </tbody>
             </table>
         </>
